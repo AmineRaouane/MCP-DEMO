@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi_mcp import FastApiMCP
+# from fastapi_mcp import FastApiMCP
 from starlette.responses import PlainTextResponse
 
 import logging
@@ -20,11 +20,11 @@ async def sum_two(a: int, b:int) -> int:
     return a + b
 
 
-mcp = FastApiMCP(
-    app,
-    include_operations=["sum_two"]
-)
-mcp.mount_http()
+# mcp = FastApiMCP(
+#     app,
+#     include_operations=["sum_two"]
+# )
+# mcp.mount_http()
 
 # ------------------ Normal FastAPI Endpoints ------------------
 
