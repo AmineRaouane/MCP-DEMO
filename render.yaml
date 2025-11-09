@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mcp-fastapi-app
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --workers=1 --worker-class uvicorn.workers.UvicornWorker -b 0.0.0.0:$8000 main:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DEBUG
+        value: False
+      - key: LOG_LEVEL
+        value: INFO
+      - key: HOST
+        value: 0.0.0.0

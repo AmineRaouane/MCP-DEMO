@@ -1,0 +1,4 @@
+fastapi==0.118.2
+uvicorn==0.34.2
+fastapi-mcp==0.4.0
+gunicorn
